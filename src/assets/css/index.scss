@@ -1,0 +1,209 @@
+@import "./color";
+@import "./functions";
+@import "./theme";
+@import "./icon";
+@import "./animate";
+
+$body-max-width: 640px;
+$body-min-width: 320px;
+
+*{
+  margin:0;
+  padding:0;
+ -webkit-tap-highlight-color:transparent;
+}
+html,body {   
+   height: 100%;  
+   font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+   font-size: 62.5%;
+   min-width: $body-min-width;
+   margin:0 auto;
+ }
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-shadow: none;
+    -webkit-appearance: none;
+	outline: none;
+	border:0;
+	box-shadow: 0;
+}
+input::-webkit-search-cancel-button{
+    display: none;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration:none;
+	color:#444444;
+}
+hr{
+	border:0;
+	background-color: #efefef;
+	height: 1px;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float:right;
+}
+.bold{
+	font-weight: bold;
+}
+.ellipsis{
+	white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.clearfix {*zoom: 1;}
+.clearfix:before,.clearfix:after {display: table;line-height: 0;content: "";} 
+.clearfix:after {clear: both;} 
+//padding
+$padding:0;
+
+@while $padding <31 {
+	.p#{t}#{$padding}{
+		padding-top:$padding#{px}!important;
+	}
+	.p#{b}#{$padding}{
+		padding-bottom:$padding#{px}!important;
+	}
+	.p#{l}#{$padding}{
+		padding-left:$padding#{px}!important;
+	}
+	.p#{r}#{$padding}{
+		padding-right:$padding#{px}!important;
+    }
+    .p#{$padding}{
+        padding:$padding#{px}!important;
+    }
+	$padding:$padding+5;
+}
+
+//margin
+
+$margin:0;
+
+@while $margin <31 {
+	.m#{t}#{$margin}{
+		margin-top:$margin#{px}!important;
+	}
+	.m#{b}#{$margin}{
+		margin-bottom:$margin#{px}!important;
+	}
+	.m#{l}#{$margin}{
+		margin-left:$margin#{px}!important;
+	}
+	.m#{r}#{$margin}{
+		margin-right:$margin#{px}!important;
+	}
+	.m#{$margin}{
+		margin:$margin#{px}!important;
+	}
+	$margin:$margin+5;
+}
+
+//font
+
+$font:0;
+
+@while $font <21 {	
+	.f#{$font}{
+		font-size:$font#{px}!important;
+	}
+	$font:$font+1;
+}
+
+.center{
+	text-align: center!important;
+}
+.right{
+	text-align: right!important;
+}
+.left{
+	text-align:left!important;
+}
+.hide{
+	display: none!important;
+}
+
+.flex{
+	display: flex;
+	display: -webkit-box;
+	display: box;
+	
+	&.f-center{
+	
+            /*垂直居中*/  
+            /*老版本语法*/  
+            -webkit-box-align: center;  
+            -moz-box-align: center;  
+            /*混合版本语法*/  
+            -ms-flex-align: center;  
+            /*新版本语法*/  
+            -webkit-align-items: center;  
+            align-items: center;  
+            /*水平居中*/  
+            /*老版本语法*/  
+            -webkit-box-pack: center;  
+            -moz-box-pack: center;  
+            /*混合版本语法*/  
+            -ms-flex-pack: center;  
+            /*新版本语法*/  
+            -webkit-justify-content: center;  
+            justify-content: center;  
+	}
+}
+.flex-1{
+	flex:1;
+}
+
+
+.rel{
+	position: relative;
+}
+
+.block-btn{
+	display: block;
+	width:100%;
+	border-radius: 6px;
+}
+
+.tb-cell{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width:9999px;
+}
+.backdrop{
+	position: fixed;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom:0;
+	background-color: rgba(0, 0, 0, .4);
+	z-index: 1;
+}
+
+.flex{
+	display: flex;
+	display: -webkit-box;
+    display: box;
+}
+.flex-1{
+	flex:1;
+}
+
+.break-word{
+	white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+	
+
+.mint-button--default{
+	color:#000;
+	@extend .f16;
+}

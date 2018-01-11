@@ -1,0 +1,7 @@
+{
+    "ERROR_USERNAME":"请输入正确的手机号码",
+    "ERROR_PASSWORD":"请输入8-20位密码",
+    "ERROR_CONFIRM_PASSWORD":"两次输入的密码不一致",
+    "ERROR_NOTSMS":"请先获取短信验证码",
+    "ERROR_SMS":"请输入正确的短信验证码"
+}

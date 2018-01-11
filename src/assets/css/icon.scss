@@ -1,0 +1,28 @@
+
+
+//背景图标设置
+@mixin icon ($img,$size,$postion,$width,$height){
+  background:url($img) no-repeat center;
+  background-size:$size;
+  background-position:$postion;
+  width:$width;
+  height:$height;
+  display: inline-block;
+}
+
+$scan_src:"../assets/images/scan.png";
+$scan_size:42px*.6 57px*.6;
+$scan_width:42px*.6;
+$scan_height:57px*.6;
+.scan-icon{
+    @include icon($scan_src,$scan_size,center,$scan_width,$scan_height);
+}
+
+$up_shelf_src:"../assets/images/up_shelf.png";
+$up_shelf_size:27px*.7 27px*.7;
+$up_shelf_width:27px*.7;
+$up_shelf_height:27px*.7;
+.up-shelf-icon{
+    vertical-align: middle;
+    @include icon($up_shelf_src,$up_shelf_size,center,$up_shelf_width,$up_shelf_height);
+}
